@@ -1,0 +1,34 @@
+<div class="ui middle aligned center aligned grid">
+	<div class="column">
+		<form class="ui large form signup" (ngSubmit)="signup($event)">
+			<div class="ui error message" [style.display]="event.error.message != null ? 'block' : 'none'">{{event.error.message}}</div>
+			<div class="ui stacked segment">
+				<h2 class="ui teal image header">
+					<div class="content">Créer mon compte</div>
+				</h2>
+				<div class="field">
+					<div class="ui left icon input">
+						<i class="user icon"></i>
+						<input type="email" name="email" placeholder="E-mail" required>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui left icon input">
+						<i class="lock icon"></i>
+						<input type="password" name="password" placeholder="Mot de passe" required>
+					</div>
+				</div>
+				<button class="ui fluid large teal submit button" type="submit">Enregistrer</button>
+
+				<div class="ui segment loading" *ngIf="event.load.loading == true">
+					<div class="ui active inverted dimmer">
+						<div class="ui text loader">{{event.load.message}}</div>
+					</div>
+					<p></p>
+				</div>
+
+			</div>
+		</form>
+		<div class="ui message">Déjà enregistré ? <a href="/#/home">Se connecter</a></div>
+	</div>
+</div>

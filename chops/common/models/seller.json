@@ -1,0 +1,40 @@
+{
+  "name": "Seller",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string",
+      "required": false
+    },
+    "status": {
+      "type": "string",
+      "required": false
+    },
+    "liable": {
+      "type": "boolean",
+      "required": false
+    },
+    "siret": {
+      "type": "string",
+      "required": false
+    },
+    "exporter": {
+      "type": "boolean",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accounts": {
+      "type": "hasOne",
+      "model": "Account",
+      "foreignKey": "id_seller"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Buyer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "exporter": {
+      "type": "boolean",
+      "required": false
+    },
+    "center_interest": {
+      "type": "number",
+      "required": false
+    },
+    "is_vip": {
+      "type": "boolean",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accounts": {
+      "type": "hasOne",
+      "model": "Account",
+      "foreignKey": "id_buyer"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

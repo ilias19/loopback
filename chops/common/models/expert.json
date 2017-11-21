@@ -1,0 +1,19 @@
+{
+  "name": "Expert",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "accounts": {
+      "type": "hasOne",
+      "model": "Account",
+      "foreignKey": "id_expert"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
